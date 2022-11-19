@@ -1,0 +1,51 @@
+// --Basic Calculator Assignment
+// --Performing basic Arithmetic Operation, +, -, *, and / using javascript 'eval'
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="Main">
+    <p>CALCULATOR</p>
+    <form name="calcForm" onsubmit="return mySubmitFunction(event)">
+      <input name="screen"></input>
+      <div class="Oper">
+        <button onclick="calcForm.screen.value += '+'">+</button>
+        <button onclick="calcForm.screen.value += '-'">-</button>
+        <button onclick="calcForm.screen.value += '*'">*</button>
+        <button onclick="calcForm.screen.value += '/'">/</button>
+      </div>
+      <div class="num">
+        <div>
+          <button onclick="calcForm.screen.value += '1'">1</button>
+          <button onclick="calcForm.screen.value += '2'">2</button>
+          <button onclick="calcForm.screen.value += '3'">3</button>
+        </div>
+        <div>
+          <button onclick="calcForm.screen.value += '4'">4</button>
+          <button onclick="calcForm.screen.value += '5'">5</button>
+          <button onclick="calcForm.screen.value += '6'">6</button>
+        </div>
+        <div>
+          <button onclick="calcForm.screen.value += '7'">7</button>
+          <button onclick="calcForm.screen.value += '8'">8</button>
+          <button onclick="calcForm.screen.value += '9'">9</button>
+          <button onclick="calcForm.screen.value += '0'">0</button>
+        </div>
+      </div>
+      <button onclick="calcForm.screen.value = ''" class="action">CLR</button>
+      <button onclick="calcForm.screen.value = eval(calcForm.screen.value)" class="action">=</button>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>
